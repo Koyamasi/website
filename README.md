@@ -1,1 +1,1 @@
-# KoteasSoftware
+The team that makes your life different.
