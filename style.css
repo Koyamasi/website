@@ -6,6 +6,41 @@ h1
     background-color:black
 }
 
+.container-fluid
+{
+    /*background-color: purple;*/
+    height: 5rem;
+}
+
+/*formating the signin box*/
+body.signin-body
+{
+    background-color: #e6f2ff;
+}
+
+.contrainer.signin-container
+{
+    margin-top: 8%;
+}
+
+.card.signin-card
+{
+    padding: 40px 0px 20px;
+    background-color: #f4f4f4;
+    box-shadow: 2px 2px 5px;
+}
+
+.row
+{
+    /*background-color: aqua;*/
+}
+
+[class*="col-"]
+{
+    /*background-color: aliceblue;*/
+    border : 2px solid black;
+}
+
 .simpleText
 {
     font-size: 16px;
