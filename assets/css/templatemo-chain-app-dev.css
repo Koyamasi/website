@@ -1696,246 +1696,123 @@ PopUp
 ---------------------------------------------
 */
 
-#lean_overlay {
-  position: fixed;
-  z-index: 100;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-  background: #000;
-  display: none;
-}
+    /* Lean Overlay */
+    #lean_overlay {
+        position: fixed;
+        z-index: 100;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        background: #000;
+        display: none;
+    }
 
-.popupContainer {
-  position: absolute;
-  width: 330px;
-  height: auto;
-  left: 45%;
-  top: 60px;
-  background: #FFF;
-}
+    /* Modal Container */
+    .popupContainer {
+        width: 400px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        /*transform: translate(-50%, -50%);*/
+        z-index: 1000;
+    }
 
-.btn {
-  padding: 10px 20px;
-  background: #4b8ef1;
-  color: #fff;
-  transition: all .3s;
-}
+    /* Modal Header */
+    .popupHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #F4F4F2;
+        padding: 10px 20px;
+        border-bottom: 1px solid #DDD;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
 
-.btn_red {
-  background: #4b8ef1;
-  color: #FFF;
-}
+    .popupHeader .modal_close {
+        background: #4b8ef1;
+        color: #fff;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 50%;
+    }
 
-.btn:hover {
-  background: #E4E4E2;
-}
+    /* Form Styles */
+    .popupBody {
+        padding: 20px;
+    }
 
-.btn_red:hover {
-  color: #2a2a2a;
-  background: #E4E4E2;
-}
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #afafaf;
+    }
 
-a.btn {
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-}
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #DDD;
+        color: #666;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
 
-a.btn_red {
-  color: #FFF;
-}
+    textarea {
+        resize: vertical;
+    }
 
-.one_half {
-  width: 50%;
-  display: block;
-  float: left;
-}
+    /* Buttons */
+    .btn {
+        padding: 10px 20px;
+        background: #4b8ef1;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        transition: all 0.3s;
+        display: inline-block;
+    }
 
-.one_half.last {
-  width: 45%;
-  margin-left: 5%;
-}
-/* Popup Styles*/
+    .btn:hover {
+        background: #E4E4E2;
+        color: #2a2a2a;
+    }
 
-.popupHeader {
-  font-size: 16px;
-  text-transform: uppercase;
-}
+    .action_btns {
+        display: flex;
+        justify-content: space-between;
+    }
 
-.popupHeader {
-  background: #F4F4F2;
-  position: relative;
-  padding: 10px 20px;
-  border-bottom: 1px solid #DDD;
-  font-weight: bold;
-}
+    /* Button Hover Effects */
+    .btn_submit {
+        background-color: #4CAF50;
+    }
 
-.popupHeader .modal_close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 10px 15px;
-  background: #4b8ef1;
-  cursor: pointer;
-  color: #fff;
-  font-size: 16px;
-}
+    .btn_cancel {
+        background-color: #f44336;
+    }
 
-.popupBody {
-  padding: 20px;
-}
+    .btn_submit:hover {
+        background-color: #45a049;
+    }
 
-.social_login .social_box {
-  display: block;
-  clear: both;
-  padding: 10px;
-  margin-bottom: 10px;
-  background: #F4F4F2;
-  overflow: hidden;
-}
-
-.social_login .icon {
-  display: inline-block;
-  
-  padding: 5px 10px;
-  margin-right: 10px;
-  float: left;
-  color: #FFF;
-  font-size: 16px;
-  text-align: center;
-}
-
-.social_login .fb .icon {
-  background: #3B5998;
-}
-
-.social_login .google .icon {
-  background: #DD4B39;
-}
-
-.social_login .icon_title {
-  display: block;
-  padding: 5px 0;
-  float: left;
-  font-weight: bold;
-  font-size: 16px;
-  color: #777;
-}
-
-.social_login .social_box:hover {
-  background: #E4E4E2;
-}
-
-.centeredText {
-  color: #afafaf;
-  text-align: center;
-  margin: 20px 0;
-  clear: both;
-  overflow: hidden;
-  text-transform: capitalize;
-}
-
-.user_login label {
-  color: #afafaf;
-}
-
-.action_btns {
-  clear: both;
-  overflow: hidden;
-}
-
-.action_btns a {
-  display: block;
-}
-/* User Login Form */
-
-.user_login {
-  display: none;
-}
-
-.user_login label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.user_login input[type="text"],
-.user_login input[type="email"],
-.user_login input[type="password"] {
-  display: block;
-  width: 90%;
-  padding: 10px;
-  border: 1px solid #DDD;
-  color: #666;
-}
-
-.user_login input[type="checkbox"] {
-  float: left;
-  margin-right: 10px;
-  width: 22px;
-  height: 22px;
-}
-
-.user_login input[type="checkbox"]+label {
-  float: left;
-}
-
-.user_login .checkbox {
-  margin-bottom: 10px;
-  clear: both;
-  overflow: hidden;
-}
-
-.forgot_password {
-  display: block;
-  margin: 20px 0 10px;
-  clear: both;
-  overflow: hidden;
-  text-decoration: none;
-  color: #4b8ef1;
-  transition: all .3s;
-}
-/* User Register Form */
-
-.user_register {
-  display: none;
-}
-
-.user_register label {
-  color: #afafaf;
-  display: block;
-  margin-bottom: 5px;
-}
-
-.user_register input[type="text"],
-.user_register input[type="email"],
-.user_register input[type="password"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #DDD;
-  color: #666;
-}
-
-.user_register input[type="checkbox"] {
-  width: 22px;
-  height: 22px;
-  float: left;
-  margin-right: 8px;
-}
-
-.user_register input[type="checkbox"]+label {
-  float: left;
-  color: #afafaf;
-}
-
-.user_register .checkbox {
-  margin-bottom: 10px;
-  clear: both;
-  overflow: hidden;
-}
-
+    .btn_cancel:hover {
+        background-color: #e53935;
+    }
 
 
 /* 
